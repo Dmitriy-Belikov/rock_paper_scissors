@@ -1,7 +1,6 @@
 import random
 
 import easygui as g
-i = True
 
 def rock_paper_scissors():
     i = True
@@ -12,7 +11,7 @@ def rock_paper_scissors():
         choices = ['Камень', 'Ножницы', 'Бумага']
         y = g.buttonbox(msg='Игра "Камень, Ножницы, Бумага"', title='Выберите один из вариантов', choices=(choices))
         if bot == y:
-           
+
             n = g.boolbox(msg='Ничья! Повторим?', title=' ', choices=('Да', 'Нет'), image=None, default_choice='Yes',
                 cancel_choice='No')
             n
