@@ -1,6 +1,9 @@
 import random
 
 import easygui as g
+from easygui import easygui
+
+
 
 def rock_paper_scissors():
     i = True
@@ -15,28 +18,29 @@ def rock_paper_scissors():
             n = g.boolbox(msg='Ничья! Повторим?', title=' ', choices=('Да', 'Нет'), image=None, default_choice='Yes',
                 cancel_choice='No')
             n
-            if n == False:
+            if n is False or n is None:
                 i = False
                 break
+            else:
+                continue
         elif bot == 'Камень' and y == 'Ножницы' or bot == 'Ножницы' and y == 'Бумага' or bot == 'Бумага' and y == 'Камень':
 
             p = g.boolbox(msg='Вы проиграли, повторим?', title=' ', choices=('Да', 'Нет'), image=None, default_choice='Yes',
                 cancel_choice='No')
             p
-            if p == False:
+            if p is False or p is None:
                 i = False
                 break
-        else:
-
+            else:
+                continue
             pob = g.boolbox(msg='Поздравляю! Вы победили! Повторим?', title=' ', choices=('Да', 'Нет'), image=None, default_choice='Yes',
                 cancel_choice='No')
             pob
-            if pob == False:
+            if pob is False or pob is None:
                 i = False
                 break
-    print(y)
-
-
+            else:
+                continue
 
 def guess_the_number():
     easygui.msgbox('Здесь будет игра "Угадай число"')
